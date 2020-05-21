@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <section id="home">
+
+        <img src="" alt="" class="splash">
+
+
+        <div class="red_box">
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <script>
+        let side = [];
+        const URLend = "home?slug=home"
+        const endpoint = `http://yobaba.dk/kea/2sem_eks/jazz_by_heart/wordpress/wp-json/wp/v2/${URLend}`;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+            hentSlides();
+            console.log("start");
+
+        }
+
+        /************* script til splash billede text_container y cta ********/
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            side = await response.json();
+            console.log(side);
+            showElement();
+        }
+
+
+
+        function showElement() {
+            side.forEach(element => {
+                document.querySelector("img").src = element.splash_img.guid;
+                document.querySelector(".overskrift1").textContent = element.overskrift1;
+                document.querySelector(".afsnit1").textContent = element.afsnit1;
+                document.querySelector(".afsnit1_1").textContent = element.afsnit1_1;
+                document.querySelector(".cta_txt").textContent = element.tekst_til_cta;
+                document.querySelector(".cta").textContent = element.cta;
+
+            })
+
+        }
+
+    </script>
+
+</body>
+
+</html>
