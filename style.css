@@ -2,15 +2,109 @@ body {
     background-color: black;
     overflow-x: hidden;
     margin: 0;
+
+    color: aliceblue;
 }
 
-#home .splash {
+section {
+    width: 100vw;
+}
+
+
+* img {
     width: 100%;
+}
+
+
+
+
+
+* div {
+    border: dashed white 2px;
+}
+
+
+
+
+/*------header--------------*/
+
+header {
+    position: fixed;
+    background-image: linear-gradient(black, rgba(255, 255, 255, 0));
+    height: 10rem;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+
+
+/*---------nav-----------*/
+
+
+
+nav {
+    padding: 2rem;
+
+}
+
+
+
+nav a {
+    padding: 3rem;
+    padding-right: 0;
+
+
+    color: darkred;
+    font-size: 2rem;
+
+    text-decoration: none;
+
+}
+
+
+
+/*---------nav slut------*/
+
+#logo {
+    width: 4rem;
+    height: 4rem;
+
+    background-color: darkblue;
+    margin: 2rem;
+
+
+}
+
+/*------header slut--------*/
+
+
+
+
+/*---------home-------------*/
+
+
+
+/*---------splash------*/
+
+
+#home .splash_img {
+    width: 100vw;
     height: 35rem;
 }
 
 
-.red_box {
+/*------rød box--------*/
+
+
+
+.red_container {
     position: relative;
     left: -3rem;
     top: -3rem;
@@ -20,7 +114,115 @@ body {
     height: 40rem;
 
     transform: rotate(5deg);
+}
+
+#home .red_container {}
+
+
+
+#home .album_preview {
+
+    position: relative;
+    top: 4rem;
+    margin-left: 20rem;
+
+    transform: rotate(-5deg);
+
+    width: 47rem;
+
+    display: flex;
+    flex-direction: column;
 
 }
 
-#home .red_box {}
+
+
+#home .album_preview_visual {
+
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+#home .album_preview_txt {
+    line-height: 2rem;
+    padding: 2rem;
+    padding-top: 0;
+
+}
+
+#home .album_preview_txt h2 {
+    margin-top: 0;
+}
+
+#home .album_preview_audio {
+
+    display: flex;
+    justify-content: center;
+}
+
+#home .album_img {
+    width: 17rem;
+
+
+
+}
+
+#home .album_header {
+    width: 5rem;
+    height: 5rem;
+
+
+}
+
+#home .album_song_1 {
+    padding-right: 7rem;
+}
+
+#home .more {
+
+    align-self: flex-end;
+}
+
+
+/*------rød box slut----*/
+
+
+
+#home .projects {
+    height: 30rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#home .project_1 {
+    margin-right: 2rem;
+}
+
+#home .projects img {
+    width: 20rem;
+}
+
+/*---------home slut-------*/
+
+
+
+
+/*---------footer-------*/
+
+footer {
+
+    background-color: #D99236;
+
+    width: 130vw;
+    height: 20rem;
+
+    /*    transform: rotate(5deg);
+*/
+}
+
+
+
+/*---------footer slut-------*/
