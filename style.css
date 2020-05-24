@@ -19,9 +19,11 @@ section {
 
 
 
+/*
 * div {
     border: dashed white 2px;
 }
+*/
 
 
 
@@ -190,8 +192,10 @@ nav a {
 
 
 #home .projects {
-    height: 30rem;
+
+    height: 47rem;
     margin: 0 auto;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -201,8 +205,15 @@ nav a {
     margin-right: 2rem;
 }
 
+#home .projects h2 {
+    text-align: center;
+}
+
 #home .projects img {
+
+
     width: 20rem;
+    border-radius: 50%;
 }
 
 /*---------home slut-------*/
