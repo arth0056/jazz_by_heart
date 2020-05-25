@@ -55,14 +55,14 @@
 
                 <div class="album_preview_audio">
 
-                    <div class="album_song_1">
+                    <div class="album_song_container">
 
-                        <button>song 1</button>
+                        <audio class="album_song_1" controls src=""> </audio>
 
                     </div>
-                    <div class="album_song_2">
+                    <div class="album_song_container">
 
-                        <button>song 2</button>
+                        <audio class="album_song_2" controls src=""> </audio>
 
                     </div>
 
@@ -151,6 +151,8 @@
                 document.querySelector(".album_img").src = element.album_img.guid;
                 document.querySelector(".album_header").textContent = element.album_header;
                 document.querySelector(".album_txt").textContent = element.album_txt;
+                document.querySelector(".album_song_1").src = element.album_song_1.guid;
+                document.querySelector(".album_song_2").src = element.album_song_2.guid;
 
                 document.querySelector(".project_img_1").src = element.project_img_1.guid;
                 document.querySelector(".project_header_1").textContent = element.project_header_1;

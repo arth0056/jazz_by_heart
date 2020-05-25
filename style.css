@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
     margin: 0;
 
-    color: aliceblue;
+    color: #ebebeb;
 }
 
 section {
@@ -177,13 +177,18 @@ nav a {
 
 }
 
-#home .album_song_1 {
-    padding-right: 7rem;
+#home .album_song_container {
+    padding: 2rem;
+
 }
 
 #home .more {
 
     align-self: flex-end;
+
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 
