@@ -256,6 +256,19 @@ nav a {
     line-height: 2rem;
 }
 
+#music .music_magic {
+
+    margin-left: 10rem;
+
+    width: 75%;
+    height: 40rem;
+}
+
+#music .music_magic img {
+    height: 10rem;
+    padding: 1rem;
+}
+
 /*-----------music slut------*/
 
 
