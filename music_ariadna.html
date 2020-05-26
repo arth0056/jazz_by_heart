@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+
+<body>
+    <nav>
+        <button class="filter valgt" data-filter="alle">Alle</button>
+        <button class="filter" data-filter="jazz">Jazz</button>
+        <button class="filter" data-filter="blues">Blues</button>
+        <button class="filter" data-filter="rock">Rock</button>
+        <button class="filter" data-filter="folk">Folk</button>
+        <button class="filter" data-filter="funk">Funk</button>
+        <button class="filter" data-filter="bossa">Bossa</button>
+
+    </nav>
+
+
+
+    <template>
+        <h3></h3>
+        <div id="music">
+            <audio controls class="audio"></audio>
+
+        </div>
+    </template>
+
+    <main></main>
+
+    <script>
+        let side = [];
+        let filter = "alle";
+
+        /***** i wordpress er der en pods music som har to fields: 1- genre, med relationship, hvor alle de genre skal skrives for at filtrere, og 2- track, hvor jeg ligger selve mp3 filen *****/
+
+        const URLend = "music?per_page=100"
+        const endpoint = `http://ariadna.dk/kea/JazzByHeart/wp/wp-json/wp/v2/${URLend}`;
+        const container = document.querySelector("main");
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            side = await response.json();
+            console.log(side);
+            showElement();
+            addEventToButtons();
+        }
+
+        function addEventToButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+
+        function filtrering() {
+
+            console.log("filter", this.dataset.filter);
+            filter = this.dataset.filter;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            showElement();
+        }
+
+
+
+        function showElement() {
+            console.log("show", filter);
+            container.innerHTML = "";
+            const Template = document.querySelector("template");
+            side.forEach(element => {
+                if (filter == "alle" || filter == element.genre) {
+                    const clon = Template.cloneNode(true).content;
+                    clon.querySelector("h3").textContent = element.title.rendered;
+                    clon.querySelector(".audio").src = element.track.guid;
+                    container.appendChild(clon);
+                }
+            })
+
+        }
+    </script>
+
+</body></html>
