@@ -249,6 +249,12 @@ nav a {
 
     font-size: 1.4rem;
     color: #ebebeb;
+
+}
+
+#music .album_preview_visual button:hover {
+    color: #D99236;
+    cursor: pointer;
 }
 
 
