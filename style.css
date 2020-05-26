@@ -16,14 +16,17 @@ section {
 }
 
 
+audio {
+    filter: invert(90%);
+    height: 2rem;
+}
 
 
 
-/*
 * div {
     border: dashed white 2px;
 }
-*/
+
 
 
 
@@ -78,7 +81,7 @@ nav a {
     width: 4rem;
     height: 4rem;
 
-    background-color: darkblue;
+    background-color: #A01D1D;
     margin: 2rem;
 
 
@@ -96,9 +99,9 @@ nav a {
 /*---------splash------*/
 
 
-#home .splash_img {
+.splash_img {
     width: 100vw;
-    height: 35rem;
+    height: 40rem;
 }
 
 
@@ -109,28 +112,29 @@ nav a {
 .red_container {
     position: relative;
     left: -3rem;
-    top: -3rem;
+    top: -4rem;
     background-color: #A01D1D;
 
     width: 130vw;
     height: 40rem;
 
+
+
     transform: rotate(5deg);
 }
 
-#home .red_container {}
 
 
 
-#home .album_preview {
+.album_preview {
 
-    position: relative;
-    top: 4rem;
-    margin-left: 20rem;
+    position: absolute;
+    left: 13rem;
+    top: 5rem;
 
     transform: rotate(-5deg);
 
-    width: 47rem;
+    width: 74vw;
 
     display: flex;
     flex-direction: column;
@@ -143,6 +147,7 @@ nav a {
 
     display: flex;
     flex-direction: row-reverse;
+
 
 }
 
@@ -222,6 +227,36 @@ nav a {
 }
 
 /*---------home slut-------*/
+
+
+/*-----------music-----------*/
+
+#music .album_preview_visual {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+
+}
+
+#music .album_preview_visual button {
+
+    background-color: transparent;
+    border-color: transparent;
+
+    font-size: 1.4rem;
+    color: #ebebeb;
+}
+
+
+#music .intro_txt {
+    width: 40rem;
+    padding-left: 12rem;
+    line-height: 2rem;
+}
+
+/*-----------music slut------*/
 
 
 

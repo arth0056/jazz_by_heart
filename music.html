@@ -3,10 +3,176 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Music</title>
+    <title>Jazz By Heart | Music</title>
+    <meta name="description" content="Vocal jazz, Country jazz, Experimental jazz. Jazz for the senses, the traditional, and the daring. Jazz By Heart is a duo who dare to span many genres.">
+    <meta name="keywords" content="Vocal jazz, Country jazz, Experimental jazz">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
+    <header>
+
+        <div id="logo">
+
+        </div>
+
+        <nav>
+            <a class="select" href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="index.html">Projects</a>
+            <a href="index.html">Concerts</a>
+
+        </nav>
+    </header>
+
+    <template id="template">
+        <article class="song_container">
+
+            <h2 class="song_name"></h2>
+
+            <audio controls src="" class="song">
+
+            </audio>
+
+        </article>
+
+    </template>
+
+
+    <section id="music">
+
+        <img src="" alt="" class="splash_img">
+
+
+        <div class="red_container">
+
+            <div class="album_preview">
+
+
+                <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+
+
+                <div class="album_preview_visual">
+
+                    <button>Latest release</button>
+                    <button>Jazz</button>
+                    <button>Blues</button>
+                    <button>Rock</button>
+                    <button>Folk</button>
+                    <button>Funk</button>
+                    <button>Bossa</button>
+
+                </div>
+
+
+                <div class="song_list">
+
+
+
+                </div>
+
+                <button class="more"> -> </button>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+    <footer>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script>
+        let side = [];
+        const URLend = "songs"
+        const endpoint = `http://yobaba.dk/kea/2sem_eks/jazz_by_heart/wordpress/wp-json/wp/v2/${URLend}`;
+
+        let side2 = [];
+        const URLend2 = "music?slug=music"
+        const endpoint2 = `http://yobaba.dk/kea/2sem_eks/jazz_by_heart/wordpress/wp-json/wp/v2/${URLend2}`;
+
+
+        const container = document.querySelector(".song_list");
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+            hentData2();
+
+            console.log("start");
+
+        }
+
+        /************* script til splash billede text_container y cta ********/
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            side = await response.json();
+            console.log(side);
+            showSongs();
+        }
+
+        async function hentData2() {
+            const response2 = await fetch(endpoint2);
+            side2 = await response2.json();
+            console.log(side2);
+            showElement();
+        }
+
+
+
+
+
+        function showSongs() {
+
+            console.log(side);
+            container.innerHTML = "";
+            const template = document.querySelector("#template");
+
+            side.forEach(ting => {
+
+
+                const clon = template.cloneNode(true).content;
+
+                clon.querySelector(".song_name").textContent = ting.song_name;
+                clon.querySelector(".song").src = ting.song.guid;
+
+
+                container.appendChild(clon);
+
+            });
+
+        }
+
+
+        function showElement() {
+            side2.forEach(element => {
+                document.querySelector("img").src = element.splash_img.guid;
+
+
+            })
+
+        }
+
+    </script>
 
 </body>
 
