@@ -8,11 +8,13 @@ body {
 
 section {
     width: 100vw;
+
 }
 
 
-* img {
+img {
     width: 100%;
+    filter: grayscale(90%);
 }
 
 
@@ -20,6 +22,12 @@ audio {
     filter: invert(90%);
     height: 2rem;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+
 
 
 
@@ -29,6 +37,8 @@ audio {
     border: dashed white 2px;
 }
 */
+
+
 
 
 
@@ -99,7 +109,8 @@ nav a {
 
 .splash_img {
     width: 100vw;
-    height: 40vh;
+    height: 47vh;
+    padding-bottom: 0;
 }
 
 
@@ -128,10 +139,7 @@ nav a {
     transform: rotate(5deg);
 }
 
-
-#home .red_container {
-    height: 140vh;
-}
+/*------rød box slut----*/
 
 .album_preview {
 
@@ -144,6 +152,10 @@ nav a {
 
 
 /*---------home-------------*/
+
+#home .red_container {
+    height: 140vh;
+}
 
 
 #home .album_preview_visual {
@@ -199,8 +211,6 @@ nav a {
     padding-top: 2rem;
 }
 
-
-/*------rød box slut----*/
 
 
 
@@ -290,8 +300,68 @@ nav a {
     padding: 1rem;
 }
 
+#music .album_preview {
+
+
+    position: absolute;
+    top: 40vh;
+/*    transform: rotate(-5deg);*/
+    left: 20vw;
+
+
+    margin: 0 auto;
+
+}
+
+
 /*-----------music slut------*/
 
+
+
+
+/*----------about------------*/
+
+#about .img_1,
+.img_2,
+.img_3 {
+
+    border-radius: 50%;
+
+}
+
+
+#about h2 {
+
+    text-align: center;
+}
+
+
+#about .red_container {
+
+    background-color: #A01D1D;
+    width: 100vw;
+    height: auto;
+    position: static;
+    transform: rotate(0);
+}
+
+#about .about_wrap {
+    margin: 0 auto;
+
+    width: 80vw;
+    padding-bottom: 10vw;
+}
+
+#about .about_1_wrapper {
+    padding: 2rem;
+}
+
+
+#about .about_2_wrapper {}
+
+#about .about_3_wrapper {}
+
+/*----------about slut-------*/
 
 
 
@@ -304,6 +374,7 @@ footer {
     width: 130vw;
     height: 20rem;
 
+
     /*    transform: rotate(5deg);
 */
 }
@@ -312,12 +383,19 @@ footer {
 
 /*---------footer slut-------*/
 
+
+
+
+
+
 /*---------------------------MEDIA QUERY HOME-------*/
 
 @media only screen and (min-width: 600px) {
+    /*
     body {
         background-color: lightblue;
     }
+*/
 
     .album_preview_wrapper {
         display: flex;
@@ -353,6 +431,43 @@ footer {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+    }
+
+
+    /*----------about--------*/
+
+    #about .about_1_wrapper {
+        display: flex;
+    }
+
+    #about .about_2_wrapper {
+        display: flex;
+    }
+
+    #about .about_3_wrapper {
+        display: flex;
+    }
+
+    #about .img_1,
+    .img_2,
+    .img_3 {
+        width: 25vw;
+    }
+
+    #about .about_2_wrapper {
+        flex-direction: row-reverse;
+    }
+
+    #about .about_1_txt,
+    .about_2_txt,
+    .about_3_txt {
+        width: 40vw;
+        padding-left: 10vw;
+    }
+
+    #about .about_2_txt {
+        padding-right: 10vw;
+        padding-left: 0;
     }
 
 }
