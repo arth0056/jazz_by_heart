@@ -103,7 +103,7 @@ nav a {
 
 .splash_img {
     width: 100vw;
-    height: 40rem;
+    height: 40vh;
 }
 
 
@@ -118,7 +118,7 @@ nav a {
     background-color: #A01D1D;
 
     width: 130vw;
-    height: 40rem;
+    height: 120vh;
 
 
 
@@ -126,20 +126,16 @@ nav a {
 }
 
 
-
+#home .red_container {
+    height: 140vh;
+}
 
 .album_preview {
 
     position: absolute;
-    left: 13rem;
-    top: 5rem;
+    top: 40vh;
 
-    transform: rotate(-5deg);
-
-    width: 74vw;
-
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
 
 }
 
@@ -148,9 +144,15 @@ nav a {
 #home .album_preview_visual {
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+}
 
-
+#home .album_img {
+    width: 40vh;
+    /*    margin: 0 auto;*/
+    display: flex;
+    align-self: center;
+    padding-bottom: 2rem;
 }
 
 #home .album_preview_txt {
@@ -164,38 +166,32 @@ nav a {
     margin-top: 0;
 }
 
+
 #home .album_preview_audio {
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-#home .album_img {
-    width: 17rem;
-
-
-
-}
-
-#home .album_header {
-    width: 5rem;
-    height: 5rem;
-
 
 }
 
 #home .album_song_container {
-    padding: 2rem;
+    padding: 1rem;
 
 }
 
+
+
+
 #home .more {
 
-    align-self: flex-end;
-
+    float: right;
+    position: relative;
+    right: 5vw;
     color: white;
     background-color: transparent;
     border-color: transparent;
+    padding-top: 2rem;
 }
 
 
@@ -204,21 +200,19 @@ nav a {
 
 
 #home .projects {
-
-    height: 47rem;
-    margin: 0 auto;
-
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    flex-direction: column;
 
-#home .project_1 {
-    margin-right: 2rem;
-}
+    align-items: center;
 
-#home .projects h2 {
     text-align: center;
+}
+
+#home .project_1,
+.project_2,
+.project_3 {
+    padding-bottom: 6rem;
+
 }
 
 #home .projects img {
@@ -227,6 +221,20 @@ nav a {
     width: 20rem;
     border-radius: 50%;
 }
+
+
+#home .projects h2 {
+    text-align: center;
+}
+
+#home .projects p {
+    text-align: left;
+    padding: 0rem 2rem 1rem 2rem;
+
+    max-width: 24rem;
+}
+
+
 
 /*---------home slut-------*/
 
@@ -292,3 +300,52 @@ footer {
 
 
 /*---------footer slut-------*/
+
+/*---------------------------MEDIA QUERY HOME-------*/
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .album_preview_wrapper {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .album_preview {
+
+        display: flex;
+        flex-direction: column;
+
+
+        /*        margin: 2;*/
+
+    }
+
+    #home .album_preview_visual {
+
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    #home .album_img {
+        justify-content: flex-start;
+
+    }
+
+
+    #home .projects {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+
+
+/*---------------------------MEDIA QUERY slut-------*/
