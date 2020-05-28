@@ -23,11 +23,13 @@ audio {
 
 
 
+
 /*
 * div {
     border: dashed white 2px;
 }
 */
+
 
 
 
@@ -94,17 +96,18 @@ nav a {
 
 
 
-/*---------home-------------*/
-
-
-
-/*---------splash------*/
-
 
 .splash_img {
     width: 100vw;
     height: 40vh;
 }
+
+
+
+
+
+
+
 
 
 /*------rød box--------*/
@@ -139,6 +142,8 @@ nav a {
 
 }
 
+
+/*---------home-------------*/
 
 
 #home .album_preview_visual {
@@ -257,6 +262,12 @@ nav a {
 
     font-size: 1.4rem;
     color: #ebebeb;
+
+}
+
+#music .album_preview_visual button:hover {
+    color: #D99236;
+    cursor: pointer;
 }
 
 
