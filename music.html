@@ -57,7 +57,8 @@
 
                 <div class="album_preview_visual">
 
-                    <button>Latest release</button>
+                    <button class="filter valgt" data-filter="alle">alle</button>
+
                     <button class="filter" data-filter="jazz">jazz</button>
                     <button class="filter" data-filter="blues">blues</button>
                     <button class="filter" data-filter="rock">rock</button>
@@ -118,6 +119,8 @@
         const endpoint2 = `http://yobaba.dk/kea/2sem_eks/jazz_by_heart/wordpress/wp-json/wp/v2/${URLend2}`;
 
 
+
+        let filter = "alle";
         const container = document.querySelector(".song_list");
 
         document.addEventListener("DOMContentLoaded", start);
@@ -137,6 +140,7 @@
             side = await response.json();
             console.log(side);
             showSongs();
+            addEventToButtons();
         }
 
         async function hentData2() {
@@ -149,6 +153,25 @@
 
 
 
+        function addEventToButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+
+            })
+        }
+
+
+        function filtrering() {
+
+            console.log("filter", this.dataset.filter);
+            filter = this.dataset.filter;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            showSongs();
+        }
+
 
         function showSongs() {
 
@@ -158,15 +181,17 @@
 
             side.forEach(ting => {
 
-
-                const clon = template.cloneNode(true).content;
-
-                clon.querySelector(".song_name").textContent = ting.song_name;
-                clon.querySelector(".song").src = ting.song.guid;
+                if (filter == "alle" || filter == ting.genre) {
 
 
-                container.appendChild(clon);
+                    const clon = template.cloneNode(true).content;
 
+                    clon.querySelector(".song_name").textContent = ting.song_name;
+                    clon.querySelector(".song").src = ting.song.guid;
+
+
+                    container.appendChild(clon);
+                }
             });
 
         }
