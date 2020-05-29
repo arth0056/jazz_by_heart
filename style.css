@@ -804,10 +804,11 @@ header {
 #about .red_container {
 
     background-color: #A01D1D;
-    width: 100vw;
-    height: auto;
+    width: 140vw;
+    height: 80vh;
     position: static;
-    transform: rotate(0);
+    transform: rotate(5deg) translate(-17vw) translateY(-10vh);
+
 }
 
 #about .about_wrap {
@@ -819,6 +820,7 @@ header {
 
 #about .about_1_wrapper {
     padding: 2rem;
+    transform: rotate(-5deg);
 }
 
 
