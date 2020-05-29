@@ -15,19 +15,41 @@
 
     <header>
 
-        <div id="logo">
 
-        </div>
 
         <nav>
-            <a class="select" href="index.html">Home</a>
-            <a href="music.html">Music</a>
-            <a href="projects.html">Projects</a>
-            <a href="concerts.html">Concerts</a>
-            <a href="about.html">About</a>
+            <div id="logo">
+                <a href="index.html"><img src="static_img/logo.svg" title="Forside" alt="logo" class="logo"></a>
+            </div>
+
+
+
+            <div id="burgermenu" class="burgermenu_visibility">
+                <div id="burgermenu_knap"></div>
+                <ul id="burgermenu_background" class="hidden">
+
+                    <a class="selected" href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="index.html">Projects</a>
+                    <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+
+                </ul>
+            </div>
+
+            <div id="desktop_menu" class="desktopmenu_visibility">
+
+
+                <a class="selected" href="index.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="index.html">Projects</a>
+                <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+
+            </div>
 
         </nav>
+
     </header>
+
 
 
     <section id="about">
@@ -176,6 +198,8 @@
         }
 
     </script>
+
+    <script src="script.js"></script>
 
 </body>
 
