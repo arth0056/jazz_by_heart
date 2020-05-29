@@ -14,7 +14,7 @@ section {
 
 img {
     width: 100%;
-    filter: grayscale(90%);
+
 }
 
 
@@ -39,6 +39,36 @@ audio {
 */
 
 
+h1,
+
+h2 {
+
+    font-family: 'Yeseva One', cursive;
+
+}
+
+
+
+p {
+
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 500;
+
+}
+
+
+
+a,
+
+button {
+
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 700;
+
+}
+
 
 
 
@@ -47,16 +77,134 @@ audio {
 
 /*------header--------------*/
 
+
+
 header {
+
     position: fixed;
+
     background-image: linear-gradient(black, rgba(255, 255, 255, 0));
+
     height: 10rem;
+
     width: 100%;
+
     z-index: 1;
 
+
+
     display: flex;
+
     justify-content: space-between;
 
+
+
+}
+
+
+
+
+
+#logo {
+
+    width: 7rem;
+
+    /*    z-index: 24;*/
+
+    position: relative;
+
+    top: 1rem;
+
+    left: .5rem;
+
+
+
+}
+
+
+
+/*--- Her er burgermenu synlig og desktop menu hidden - ændres i mediaquery 600px -*/
+
+
+
+
+
+.burgermenu_visibility {
+
+    visibility: visible;
+
+}
+
+
+
+.desktopmenu_visibility {
+
+    visibility: hidden;
+
+}
+
+
+
+/*--------- DESKTOP nav-----------*/
+
+#desktop_menu .selected {
+
+    border-top: solid 2rem #D99236;
+
+    position: relative;
+
+    top: -3.5rem;
+
+    padding-top: 1.5rem;
+
+}
+
+
+
+
+
+#desktop_menu {
+
+    display: flex;
+
+    flex-direction: row;
+
+    right: 5vw;
+
+    top: 5vh;
+
+    position: fixed;
+
+}
+
+
+
+
+
+#desktop_menu a {
+
+    text-decoration-line: none;
+
+    list-style-type: none;
+
+    font-size: 1.2rem;
+
+
+
+    margin-right: 3vw;
+
+    display: flex;
+
+
+
+    font-family: 'Yeseva One', cursive;
+
+    font-weight: 100;
+
+    color: white;
+
+
+
 }
 
 
@@ -64,42 +212,212 @@ header {
 
 
 
-/*---------nav-----------*/
+
+/*--------- BURGER nav-----------*/
 
 
 
-nav {
-    padding: 2rem;
+#burgermenu .selected {
+
+    border-right: solid 2rem #D99236;
+
+    position: relative;
+
+    right: -2rem;
 
 }
 
 
 
-nav a {
-    padding: 3rem;
-    padding-right: 0;
 
 
-    color: darkred;
-    font-size: 2rem;
+#burgermenu a {
+
+
+
+    margin: 2rem;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    font-family: 'Yeseva One', cursive;
+
+    font-weight: 100;
+
+
 
     text-decoration: none;
 
+
+
 }
+
+
+
+/*til at gemme bacggrunden af burgermenu*/
+
+.hidden {
+
+    visibility: hidden;
+
+}
+
+
+
+
+
+#burgermenu_knap {
+
+    position: fixed;
+
+    height: 3rem;
+
+    width: 3rem;
+
+    background-image: url(static_img/burger_open.svg);
+
+    background-size: cover;
+
+    top: 4vw;
+
+    right: 4vw;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    filter: grayscale(0);
+
+}
+
+
+
+
+
+#burgermenu_background {
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+    top: 0vw;
+
+    right: 0vw;
+
+    height: 100vh;
+
+    width: 100vw;
+
+    padding-top: 10vw;
+
+    position: fixed;
+
+}
+
+
+
+
+
+
+
+#burgermenu a {
+
+    padding-right: 3vw;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+/*-----------  Burgermenu animation     --------*/
+
+
+
+.closed {
+
+    animation-name: close_kf;
+
+    animation-duration: 0s;
+
+    animation-fill-mode: both;
+
+    animation-timing-function: linear;
+
+
+
+}
+
+
+
+@keyframes close_kf {
+
+    0% {
+
+        background-image: url(static_img/burger_close.svg);
+
+
+
+    }
+
+
+
+    100% {
+
+        background-image: url(static_img/burger_open.svg);
+
+    }
+
+}
+
+
+
+
+
+.open {
+
+    animation-name: open_kf;
+
+    animation-duration: 0s;
+
+    animation-fill-mode: both;
+
+    animation-timing-function: linear;
+
+
+
+}
+
+
+
+@keyframes open_kf {
+
+
+
+
+
+    100% {
+
+        background-image: url(static_img/burger_close.svg);
+
+    }
+
+
+
+}
+
+
 
 
 
 /*---------nav slut------*/
 
-#logo {
-    width: 4rem;
-    height: 4rem;
-
-    background-color: #A01D1D;
-    margin: 2rem;
 
 
-}
+
 
 /*------header slut--------*/
 
@@ -108,12 +426,12 @@ nav a {
 
 
 .splash_img {
+
     width: 100vw;
-    height: 47vh;
-    padding-bottom: 0;
+
+
+
 }
-
-
 
 
 
@@ -125,129 +443,276 @@ nav a {
 
 
 
+
+
+
+
 .red_container {
+
     position: relative;
+
     left: -3rem;
+
     top: -4rem;
-    background-color: #A01D1D;
+
+    background-color: #842a31;
+
+
 
     width: 130vw;
+
     height: 120vh;
 
 
 
+
+
+
+
     transform: rotate(5deg);
+
 }
 
-/*------rød box slut----*/
+
+
+
+
+#home .red_container {
+
+    height: 160vh;
+
+}
+
+
 
 .album_preview {
 
+
+
     position: absolute;
+
     top: 40vh;
+
+
 
     margin: 0 auto;
 
+
+
 }
+
+
+
 
 
 /*---------home-------------*/
 
-#home .red_container {
-    height: 140vh;
-}
+
+
+
+
+
 
 
 #home .album_preview_visual {
 
+
+
     display: flex;
+
     flex-direction: column-reverse;
+
 }
+
+
 
 #home .album_img {
+
     width: 40vh;
+
     /*    margin: 0 auto;*/
+
     display: flex;
+
     align-self: center;
+
     padding-bottom: 2rem;
+
 }
+
+
 
 #home .album_preview_txt {
+
     line-height: 2rem;
+
     padding: 2rem;
+
     padding-top: 0;
 
+
+
 }
 
+
+
 #home .album_preview_txt h2 {
+
     margin-top: 0;
+
 }
+
+
+
 
 
 #home .album_preview_audio {
 
+
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
 
+
+
 }
+
+
 
 #home .album_song_container {
+
     padding: 1rem;
 
+
+
 }
+
+
+
+
+
 
 
 
 
 #home .more {
 
+
+
     float: right;
+
     position: relative;
+
     right: 5vw;
+
     color: white;
+
     background-color: transparent;
+
     border-color: transparent;
-    padding-top: 2rem;
+
+    top: -20vh;
+
 }
+
+
+
+
+
+/*------rød box slut----*/
+
+
+
 
 
 
 
 #home .projects {
+
+    width: 100vw;
+
     display: flex;
+
+    flex-wrap: wrap;
+
+
+
     flex-direction: column;
+
+
 
     align-items: center;
 
-    text-align: center;
+    justify-content: center;
+
+    align-content: center;
+
+
+
+
+
 }
+
+
 
 #home .project_1,
+
 .project_2,
+
 .project_3 {
+
     padding-bottom: 6rem;
 
+    width: 65%;
+
+
+
 }
+
+
 
 #home .projects img {
 
 
-    width: 20rem;
+
+    padding: 0rem 2rem 1rem 2rem;
+
+    width: 80%;
+
     border-radius: 50%;
+
 }
+
+
+
 
 
 #home .projects h2 {
+
     text-align: center;
+
 }
+
+
 
 #home .projects p {
-    text-align: left;
+
+    /*    text-align: left;*/
+
     padding: 0rem 2rem 1rem 2rem;
 
+
+
     max-width: 24rem;
+
 }
+
+
+
+
 
 
 
@@ -305,7 +770,7 @@ nav a {
 
     position: absolute;
     top: 40vh;
-/*    transform: rotate(-5deg);*/
+    /*    transform: rotate(-5deg);*/
     left: 20vw;
 
 
@@ -390,85 +855,194 @@ footer {
 
 /*---------------------------MEDIA QUERY HOME-------*/
 
+
+
 @media only screen and (min-width: 600px) {
-    /*
-    body {
-        background-color: lightblue;
+
+
+
+    /*-----------NAV------*/
+
+
+
+    .burgermenu_visibility {
+
+        visibility: hidden;
+
     }
-*/
+
+
+
+    .desktopmenu_visibility {
+
+        visibility: visible;
+
+    }
+
+
+
+    /*-----------Home------*/
+
+
+
+    #home .red_container {
+
+        height: 120vh;
+
+    }
+
+
+
+
+
+    /*-----------album------*/
+
+    #home .album_preview {
+
+        top: 90vh;
+    }
+
+
 
     .album_preview_wrapper {
+
         display: flex;
+
         justify-content: center;
 
+
+
     }
+
+
 
     .album_preview {
 
-        display: flex;
-        flex-direction: column;
 
+
+        display: flex;
+
+        flex-direction: column;
 
         /*        margin: 2;*/
 
     }
 
+
+
+
+
+
+
     #home .album_preview_visual {
 
+
+
         display: flex;
+
         flex-direction: row-reverse;
+
         max-width: 80vw;
+
         margin: 0 auto;
+
+        padding-bottom: 5rem;
+
     }
+
+
+
+    #home .album_preview_txt {
+
+        max-width: 60%;
+
+        padding-left: 7vw;
+
+    }
+
+
 
     #home .album_img {
-        justify-content: flex-start;
+
+        width: 30%;
 
     }
+
+
+
+    #home .more {
+
+        right: -30vw;
+
+    }
+
+
+
+    /*-----------projects------*/
+
 
 
     #home .projects {
+
         flex-wrap: wrap;
+
         flex-direction: row;
+
         justify-content: center;
+
+
+
     }
 
 
-    /*----------about--------*/
 
-    #about .about_1_wrapper {
-        display: flex;
+    #home .project_1,
+
+    .project_2,
+
+    .project_3 {
+
+        width: auto;
+
     }
 
-    #about .about_2_wrapper {
-        display: flex;
-    }
+}
 
-    #about .about_3_wrapper {
-        display: flex;
-    }
+/*----------about--------*/
 
-    #about .img_1,
-    .img_2,
-    .img_3 {
-        width: 25vw;
-    }
+#about .about_1_wrapper {
+    display: flex;
+}
 
-    #about .about_2_wrapper {
-        flex-direction: row-reverse;
-    }
+#about .about_2_wrapper {
+    display: flex;
+}
 
-    #about .about_1_txt,
-    .about_2_txt,
-    .about_3_txt {
-        width: 40vw;
-        padding-left: 10vw;
-    }
+#about .about_3_wrapper {
+    display: flex;
+}
 
-    #about .about_2_txt {
-        padding-right: 10vw;
-        padding-left: 0;
-    }
+#about .img_1,
+.img_2,
+.img_3 {
+    width: 25vw;
+}
+
+#about .about_2_wrapper {
+    flex-direction: row-reverse;
+}
+
+#about .about_1_txt,
+.about_2_txt,
+.about_3_txt {
+    width: 40vw;
+    padding-left: 10vw;
+}
+
+#about .about_2_txt {
+    padding-right: 10vw;
+    padding-left: 0;
+}
 
 }
 
