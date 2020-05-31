@@ -21,26 +21,47 @@
 
     <header>
 
-        <div id="logo">
 
-        </div>
 
         <nav>
-            <a class="select" href="index.html">Home</a>
-            <a href="music.html">Music</a>
-            <a href="projects.html">Projects</a>
-            <a href="concerts.html">Concerts</a>
-            <a href="about.html">About</a>
+            <div id="logo">
+                <a href="index.html"><img src="static_img/logo.svg" title="Forside" alt="logo" class="logo"></a>
+            </div>
+
+
+
+            <div id="burgermenu" class="burgermenu_visibility">
+                <div id="burgermenu_knap"></div>
+                <ul id="burgermenu_background" class="hidden">
+
+                    <a class="selected" href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="index.html">Projects</a>
+                    <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+
+                </ul>
+            </div>
+
+            <div id="desktop_menu" class="desktopmenu_visibility">
+
+
+                <a class="selected" href="index.html">Home</a>
+                <a href="music.html">Music</a>
+                <a href="index.html">Projects</a>
+                <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+
+            </div>
 
         </nav>
+
     </header>
 
     <template id="template">
         <article class="concert_container">
 
-            <h2 class="concert_time"></h2>
-            <h2 class="band_name"></h2>
-            <h2 class="concert_place"></h2>
+            <p class="concert_time"></p>
+            <p class="band_name"></p>
+            <p class="concert_place"></p>
 
         </article>
 
@@ -56,18 +77,27 @@
 
 
 
+
+
+            <!--
+        <button class="filter valgt" data-filter="alle">alle</button>
+        <button class="filter" data-filter="Upcoming">Upcoming</button>
+        <button class="filter" data-filter="Previous">Previous</button>
+-->
+
+
+
             <div class="album_preview">
 
 
-                <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+                <p class="intro_txt"> Upcoming dates</p>
 
 
-                <div class="album_preview_visual">
+                <div class="concert_info">
 
-                    <button class="filter valgt" data-filter="alle">alle</button>
-
-                    <button class="filter" data-filter="Upcoming">Upcoming</button>
-                    <button class="filter" data-filter="Previous">Previous</button>
+                    <p>Date & time</p>
+                    <p>Name</p>
+                    <p>Place</p>
 
 
                 </div>
@@ -79,11 +109,12 @@
 
                 </div>
 
-                <button class="more"> -> </button>
+
 
             </div>
-
         </div>
+
+
 
 
 
@@ -117,7 +148,7 @@
 
 
 
-        let filter = "alle";
+        let filter = "Upcoming";
         const container = document.querySelector(".song_list");
 
         document.addEventListener("DOMContentLoaded", start);
@@ -162,6 +193,8 @@
 
             console.log("filter", this.dataset.filter);
             filter = this.dataset.filter;
+            filter = "Upcoming";
+
             document.querySelectorAll(".filter").forEach(elm => {
                 elm.classList.remove("valgt");
             })
@@ -185,6 +218,7 @@
 
                     clon.querySelector(".band_name").textContent = ting.band_name;
                     clon.querySelector(".concert_place").textContent = ting.location;
+                    clon.querySelector(".concert_time").textContent = ting.date_time;
 
 
                     container.appendChild(clon);
@@ -196,7 +230,7 @@
 
         function showElement() {
             side2.forEach(element => {
-                document.querySelector("img").src = element.splash_img.guid;
+                document.querySelector(".splash_img").src = element.splash_img.guid;
 
 
             })
