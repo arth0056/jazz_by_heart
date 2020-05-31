@@ -7,7 +7,7 @@ body {
 }
 
 section {
-    width: 100vw;
+    width: 100%;
 
 }
 
@@ -32,11 +32,11 @@ audio {
 
 
 
-/*
+
 * div {
     border: dashed white 2px;
 }
-*/
+
 
 
 h1,
@@ -449,26 +449,8 @@ header {
 
 .red_container {
 
-    position: relative;
-
-    left: -3rem;
-
-    top: -4rem;
-
     background-color: #842a31;
-
-
-
     width: 130vw;
-
-    height: 120vh;
-
-
-
-
-
-
-
     transform: rotate(5deg);
 
 }
@@ -479,23 +461,25 @@ header {
 
 #home .red_container {
 
+    position: relative;
+
+    left: -3rem;
+    top: -4rem;
+
     height: 160vh;
 
 }
 
 
 
-.album_preview {
+#home .album_preview {
 
 
 
     position: absolute;
-
     top: 40vh;
+    margin: auto;
 
-
-
-    margin: 0 auto;
 
 
 
@@ -718,17 +702,73 @@ header {
 
 /*---------home slut-------*/
 
+/*---------concerts--------*/
+
+#concerts .album_preview {
+
+
+    transform: rotate(-5deg) translate(10vw);
+    margin: auto;
+    max-width: 70vw;
+    padding: 4rem;
+
+}
+
+#concerts .red_container {
+
+    transform: rotate(5deg) translate(-30vw) translateY(-10vh);
+    height: 100%;
+}
+
+
+#concerts .concert_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#concerts .articles {}
+
+/*---------concerts slut--------*/
 
 /*-----------music-----------*/
+
+#music .red_container {
+
+
+
+    /*
+    display: flex;
+    justify-content: center;
+*/
+
+    transform: rotate(5deg) translate(-30vw) translateY(-10vh);
+    height: 100%;
+
+}
+
+
+
+#music .album_preview {
+
+
+    transform: rotate(-5deg) translate(10vw);
+    margin: auto;
+    max-width: 70vw;
+    padding: 4rem;
+
+}
+
 
 #music .album_preview_visual {
 
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
 
 
 }
+
+
 
 #music .album_preview_visual button {
 
@@ -747,36 +787,26 @@ header {
 
 
 #music .intro_txt {
-    width: 40rem;
-    padding-left: 12rem;
+    width: 70vw;
+
     line-height: 2rem;
 }
 
 #music .music_magic {
 
-    margin-left: 10rem;
 
-    width: 75%;
-    height: 40rem;
+    display: flex;
+    flex-direction: column;
+
+
 }
 
 #music .music_magic img {
-    height: 10rem;
-    padding: 1rem;
+    width: 50vw;
+    padding: 2rem;
 }
 
-#music .album_preview {
 
-
-    position: absolute;
-    top: 40vh;
-    /*    transform: rotate(-5deg);*/
-    left: 20vw;
-
-
-    margin: 0 auto;
-
-}
 
 
 /*-----------music slut------*/
@@ -803,9 +833,9 @@ header {
 
 #about .red_container {
 
-    background-color: #A01D1D;
+
     width: 140vw;
-    height: 80vh;
+
     position: static;
     transform: rotate(5deg) translate(-17vw) translateY(-10vh);
 
@@ -819,7 +849,8 @@ header {
 }
 
 #about .about_1_wrapper {
-    padding: 2rem;
+
+    padding: 4rem;
     transform: rotate(-5deg);
 }
 
