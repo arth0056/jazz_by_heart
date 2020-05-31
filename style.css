@@ -1,6 +1,7 @@
 body {
     background-color: black;
     overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0;
 
     color: #ebebeb;
@@ -68,6 +69,8 @@ button {
     font-family: 'Raleway', sans-serif;
 
     font-weight: 700;
+    color: white;
+    text-decoration: none;
 
 }
 
@@ -786,6 +789,8 @@ header {
     width: 80vw;
     display: flex;
     align-self: center;
+
+    padding-bottom: 2rem;
 }
 
 #music .album_preview_visual {
@@ -853,6 +858,17 @@ header {
     border-color: transparent;
     color: white;
     cursor: pointer;
+}
+
+#music .music_magic_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#music .music_magic_txt p {
+    padding: 1rem 2rem 4rem 2rem;
 }
 
 
@@ -935,13 +951,20 @@ footer {
     background-color: #D99236;
 
     width: 130vw;
-    height: 20rem;
+    height: 40vh;
 
 
-    /*    transform: rotate(5deg);
+    /*
+    transform: rotate(5deg) translateX(-2vw) translateY(20vh);
+    position: relative;
 */
+
+
 }
 
+.footer_txt {
+    padding: 2rem;
+}
 
 
 /*---------footer slut-------*/
@@ -1106,6 +1129,16 @@ footer {
 
 }
 
+
+#music .red_container {
+
+    transform: rotate(5deg) translate(-16vw) translateY(-10vh);
+
+}
+
+
+
+
 /*----------about--------*/
 
 #about .about_1_wrapper {
@@ -1141,6 +1174,9 @@ footer {
     padding-right: 10vw;
     padding-left: 0;
 }
+
+
+
 
 }
 
