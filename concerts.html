@@ -34,10 +34,10 @@
                 <div id="burgermenu_knap"></div>
                 <ul id="burgermenu_background" class="hidden">
 
-                    <a class="selected" href="index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="music.html">Music</a>
                     <a href="index.html">Projects</a>
-                    <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+                    <a class="selected" href="concerts.html">Concerts</a> <a href="about.html">About</a>
 
                 </ul>
             </div>
@@ -45,10 +45,10 @@
             <div id="desktop_menu" class="desktopmenu_visibility">
 
 
-                <a class="selected" href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="music.html">Music</a>
                 <a href="index.html">Projects</a>
-                <a href="concerts.html">Concerts</a> <a href="about.html">About</a>
+                <a href="concerts.html" class="selected">Concerts</a> <a href="about.html">About</a>
 
             </div>
 
@@ -103,12 +103,33 @@
                 </div>
 
 
-                <div class="song_list">
+                <div class="upcoming_concerts">
 
 
 
                 </div>
 
+
+
+            </div>
+        </div>
+
+        <div class="previous_concerts_container">
+
+            <p class="intro_txt"> Previous dates</p>
+
+
+            <div class="concert_info">
+
+                <p>Date & time</p>
+                <p>Name</p>
+                <p>Place</p>
+
+
+            </div>
+
+
+            <div class="previous_concerts">
 
 
             </div>
@@ -149,7 +170,9 @@
 
 
         let filter = "Upcoming";
-        const container = document.querySelector(".song_list");
+        let filter2 = "Previous";
+        const container = document.querySelector(".upcoming_concerts");
+        const container2 = document.querySelector(".previous_concerts");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -168,6 +191,7 @@
             side = await response.json();
             console.log(side);
             showSongs();
+            showPreviousConcerts();
             addEventToButtons();
         }
 
@@ -188,7 +212,6 @@
             })
         }
 
-
         function filtrering() {
 
             console.log("filter", this.dataset.filter);
@@ -200,6 +223,7 @@
             })
             this.classList.add("valgt");
             showSongs();
+            showPreviousConcerts();
         }
 
 
@@ -222,6 +246,31 @@
 
 
                     container.appendChild(clon);
+                }
+            });
+
+        }
+
+
+        function showPreviousConcerts() {
+
+            console.log(side);
+            container2.innerHTML = "";
+            const template = document.querySelector("#template");
+
+            side.forEach(ting => {
+
+                if (filter2 == "alle" || filter2 == ting.upcoming_previous) {
+
+
+                    const clon = template.cloneNode(true).content;
+
+                    clon.querySelector(".band_name").textContent = ting.band_name;
+                    clon.querySelector(".concert_place").textContent = ting.location;
+                    clon.querySelector(".concert_time").textContent = ting.date_time;
+
+
+                    container2.appendChild(clon);
                 }
             });
 
