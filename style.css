@@ -33,9 +33,11 @@ audio {
 
 
 
+/*
 * div {
     border: dashed white 2px;
 }
+*/
 
 
 
@@ -712,12 +714,15 @@ header {
     max-width: 70vw;
     padding: 4rem;
 
+
+
+
 }
 
 #concerts .red_container {
 
     transform: rotate(5deg) translate(-30vw) translateY(-10vh);
-    height: 100%;
+
 }
 
 
@@ -726,7 +731,19 @@ header {
     justify-content: space-between;
 }
 
-#concerts .articles {}
+#concerts .concert_info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px #D99236;
+}
+
+#concerts article {
+    border-bottom: solid 2px #242020;
+}
+
+#concerts p {
+    margin: 4vw;
+}
 
 /*---------concerts slut--------*/
 
