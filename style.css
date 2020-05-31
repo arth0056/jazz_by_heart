@@ -712,7 +712,7 @@ header {
 #concerts .album_preview {
 
 
-    transform: rotate(-5deg) translate(10vw);
+    transform: rotate(-5deg) translate(5vw);
     margin: auto;
     max-width: 70vw;
     padding: 10rem;
@@ -722,6 +722,17 @@ header {
 
 
 }
+
+#concerts .upcoming_concerts_container {
+
+
+    margin: auto;
+    max-width: 70vw;
+    padding: 4rem;
+    padding-top: 0;
+
+}
+
 
 #concerts .previous_concerts_container {
 
@@ -741,26 +752,15 @@ header {
 
 
 #concerts .concert_container {
-    /*
-    display: flex;
-    justify-content: space-between;
-
-*/
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 4vw;
     grid-template-columns: repeat(3, 1fr);
-
-
 }
 
 #concerts .concert_info {
-    /*
-    display: flex;
-    justify-content: space-between;
 
-*/
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 4vw;
     grid-template-columns: repeat(3, 1fr);
 
 
@@ -772,7 +772,7 @@ header {
 }
 
 #concerts p {
-    /*    margin: 4vw;*/
+    /*    padding: 2rem;*/
 }
 
 /*---------concerts slut--------*/
@@ -918,7 +918,6 @@ header {
 
 
 /*-----------music slut------*/
-
 
 
 
@@ -1164,6 +1163,25 @@ footer {
     transform: rotate(5deg) translate(-16vw) translateY(-10vh);
 
 }
+
+
+
+
+
+/*-----------concerts----------*/
+
+/*
+#concerts .album_preview {
+    transform: rotate(-5deg) translate(10vw);
+    margin: auto;
+    max-width: 70vw;
+    padding: 10rem;
+    padding-top: 5rem;
+}
+*/
+
+
+/*-----------concerts slut-----*/
 
 
 
