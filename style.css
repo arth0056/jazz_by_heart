@@ -741,7 +741,7 @@ header {
     justify-content: center;
 */
 
-    transform: rotate(5deg) translate(-30vw) translateY(-10vh);
+    transform: rotate(5deg) translate(-18vw) translateY(-10vh);
     height: 100%;
 
 }
@@ -751,24 +751,35 @@ header {
 #music .album_preview {
 
 
-    transform: rotate(-5deg) translate(10vw);
+    transform: rotate(-5deg) translate(0vw);
     margin: auto;
-    max-width: 70vw;
+    max-width: 80vw;
     padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
 
 }
 
+
+#music .intro_txt {
+
+    line-height: 2rem;
+
+    width: 80vw;
+    display: flex;
+    align-self: center;
+}
 
 #music .album_preview_visual {
 
-    display: flex;
-    justify-content: space-between;
     padding: 1rem;
-
-
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center
 }
-
-
 
 #music .album_preview_visual button {
 
@@ -778,6 +789,7 @@ header {
     font-size: 1.4rem;
     color: #ebebeb;
 
+
 }
 
 #music .album_preview_visual button:hover {
@@ -785,25 +797,61 @@ header {
     cursor: pointer;
 }
 
-
-#music .intro_txt {
-    width: 70vw;
-
-    line-height: 2rem;
+#music .album_preview_visual button:active {
+    text-decoration-line: underline;
+    text-decoration-color: white;
 }
 
-#music .music_magic {
 
+
+#music .song_wrap {
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 
+    flex-wrap: wrap;
+    width: 80vw;
+}
+
+#music .song_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+}
+
+#music .song_container {
+    padding: 1rem;
+}
+
+#music .more {
+
+    padding: 2rem;
+    display: flex;
+    align-self: center;
+
+    background-color: transparent;
+
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+
+#music .music_magic {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 #music .music_magic img {
-    width: 50vw;
-    padding: 2rem;
+    max-width: 80vw;
+
+    padding-bottom: 10vw;
 }
 
 
