@@ -953,6 +953,8 @@ footer {
     width: 130vw;
     height: 40vh;
 
+    position: relative;
+    bottom: 0;
 
     /*
     transform: rotate(5deg) translateX(-2vw) translateY(20vh);
