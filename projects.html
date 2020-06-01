@@ -64,45 +64,49 @@ maximum-scale=1.0, user-scalable=no" />
 
     <img src="" alt="" class="splash_img">
 
-    <template id="template">
-        <article class="song_container">
 
+    <div id="projects">
 
-            <div class="red_container">
-
-
-
-                <div class="album_preview">
+        <div class="red_container">
 
 
 
-
-                    <div class="album_preview_visual">
-
-                        <!--                    <button class="filter valgt" data-filter="alle">alle</button>-->
-
-                        <button class="filter" data-filter="exp_motion">Experimotion</button>
-                        <button class="filter" data-filter="g_w_project">Gilllian Welsh Project</button>
-                        <button class="filter" data-filter="sb_strings">Silence between strings</button>
-
-                    </div>
-
-                    <div class="projects_intro">
-
-                        <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
-
-                        <img src="" alt="" class="intro_img">
-
-
-                    </div>
+            <div class="album_preview">
 
 
 
+
+                <div class="album_preview_visual">
+
+                    <!--                    <button class="filter valgt" data-filter="alle">alle</button>-->
+
+                    <button class="filter" data-filter="exp_motion">Experimotion</button>
+                    <button class="filter" data-filter="g_w_projects">Gilllian Welsh Project</button>
+                    <button class="filter" data-filter="sb_strings">Silence between strings</button>
+
+                </div>
+
+                <div class="projects_intro">
+
+                    <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+
+                    <img src="placeholder_img/birb.jpg" alt="" class="intro_img">
 
 
                 </div>
 
+
+
+
+
             </div>
+
+        </div>
+
+    </div>
+
+    <template id="template">
+        <article class="song_container">
 
 
             <div class="projects_content">
@@ -150,7 +154,7 @@ maximum-scale=1.0, user-scalable=no" />
 
     </template>
 
-    <section id="projects">
+    <section id="projects_temp">
     </section>
 
     <footer>
@@ -185,7 +189,7 @@ maximum-scale=1.0, user-scalable=no" />
 
 
         let filter = "exp_motion";
-        const container = document.querySelector("#projects");
+        const container = document.querySelector("#projects_temp");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -220,6 +224,7 @@ maximum-scale=1.0, user-scalable=no" />
         function addEventToButtons() {
             document.querySelectorAll(".filter").forEach(elm => {
                 elm.addEventListener("click", filtrering);
+                console.log("vi filtrere yo");
 
             })
         }
@@ -250,8 +255,8 @@ maximum-scale=1.0, user-scalable=no" />
 
                     const clon = template.cloneNode(true).content;
 
-                    clon.querySelector(".intro_img").src = ting.projects_img_1.guid;
-                    clon.querySelector(".intro_txt").textContent = ting.projects_txt_1;
+                    //                    clon.querySelector(".intro_img").src = ting.projects_img_1.guid;
+                    // clon.querySelector(".intro_txt").textContent = ting.projects_txt_1;
 
                     clon.querySelector(".project_video").src = ting.video_1.guid;
 

@@ -996,17 +996,17 @@ header {
     text-decoration-color: white;
 }
 
-#projects .project_video {
+#projects_temp .project_video {
     width: 90vw;
 
 
 }
 
-#projects .song {
+#projects_temp .song {
     margin: 4vw;
 }
 
-#projects .projects_content {
+#projects_temp .projects_content {
     text-align: center;
 }
 
@@ -1262,7 +1262,7 @@ footer {
 
     /*-----------projects------*/
 
-    #projects .project_video {
+    #projects_temp .project_video {
         width: 50vw;
     }
 
