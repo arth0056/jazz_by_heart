@@ -653,6 +653,7 @@ header {
     padding-bottom: 6rem;
 
     width: 65%;
+    justify-content: center;
 
 
 
@@ -709,11 +710,11 @@ header {
 #concerts .album_preview {
 
 
-    transform: rotate(-5deg) translate(5vw);
+    transform: rotate(-5deg) translate(0);
     margin: auto;
     max-width: 80vw;
-    padding: 10rem;
-    padding-top: 5rem;
+    padding: 10vw;
+    padding-top: 5vw;
 
 
 
@@ -724,8 +725,8 @@ header {
 
 
     margin: auto;
-    max-width: 70vw;
-    padding: 4rem;
+    width: 70vw;
+    padding: 4vw;
     padding-top: 0;
 
 }
@@ -736,14 +737,14 @@ header {
 
     margin: auto;
     max-width: 70vw;
-    padding: 4rem;
+    padding: 4vw;
     padding-top: 0;
 
 }
 
 #concerts .red_container {
 
-    transform: rotate(5deg) translate(-30vw) translateY(-10vh);
+    transform: rotate(5deg) translate(-20vw) translateY(-10vh);
 
 }
 
@@ -925,7 +926,13 @@ header {
 .img_3 {
 
     border-radius: 50%;
+    width: 40vw;
 
+}
+
+#about .img_wrap {
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -947,16 +954,20 @@ header {
 
 #about .about_wrap {
     margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 80vw;
-    padding-bottom: 10vw;
+    padding: 4vw;
+
 }
 
 #about .about_1_wrapper {
 
-    padding: 4rem;
-    transform: rotate(-5deg);
+
+    transform: rotate(-5deg) translate(-4vw);
 }
+
 
 
 #about .about_2_wrapper {}
@@ -973,7 +984,7 @@ footer {
 
     background-color: #D99236;
 
-    width: 130vw;
+    width: 100vw;
     height: 40vh;
 
     position: relative;
@@ -989,6 +1000,7 @@ footer {
 
 .footer_txt {
     padding: 2rem;
+    padding-bottom: 0;
 }
 
 
@@ -1152,78 +1164,94 @@ footer {
 
     }
 
-}
-
-
-#music .red_container {
-
-    transform: rotate(5deg) translate(-16vw) translateY(-10vh);
-
-}
 
 
 
+    #music .red_container {
 
+        transform: rotate(5deg) translate(-16vw) translateY(-10vh);
 
-/*-----------concerts----------*/
-
-/*
-#concerts .album_preview {
-    transform: rotate(-5deg) translate(10vw);
-    margin: auto;
-    max-width: 70vw;
-    padding: 10rem;
-    padding-top: 5rem;
-}
-*/
-
-
-/*-----------concerts slut-----*/
+    }
 
 
 
 
-/*----------about--------*/
 
-#about .about_1_wrapper {
-    display: flex;
-}
+    /*-----------concerts----------*/
 
-#about .about_2_wrapper {
-    display: flex;
-}
 
-#about .about_3_wrapper {
-    display: flex;
-}
+    #concerts .album_preview {
+        transform: rotate(-5deg) translate(3vw);
 
-#about .img_1,
-.img_2,
-.img_3 {
-    width: 25vw;
-}
+    }
 
-#about .about_2_wrapper {
-    flex-direction: row-reverse;
-}
+
+
+    /*-----------concerts slut-----*/
+
+
+
+
+    /*----------about--------*/
+
+
+    #about .about_wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #about .img_1,
+    .img_2,
+    .img_3 {
+        width: 25vw;
+    }
+
+    #about .paragraph_1,
+    .paragraph_2,
+    .paragraph_3 {
+        width: 40vw;
+        padding-left: 10vw;
+    }
+
+    #about .about_2_wrapper {
+        flex-direction: row-reverse;
+    }
+
+    #about .paragraph_2 {
+        padding-right: 10vw;
+        padding-left: 0;
+    }
+
+    /*
+    #about .about_2_wrapper {
+        display: flex;
+    }
+
+    #about .about_3_wrapper {
+        display: flex;
+    }
+
+
+
+
 
 #about .about_1_txt,
 .about_2_txt,
 .about_3_txt {
     width: 40vw;
-    padding-left: 10vw;
+
 }
 
-#about .about_2_txt {
-    padding-right: 10vw;
-    padding-left: 0;
-}
+
 
 
 
 
 }
+*/
 
 
+}
 
 /*---------------------------MEDIA QUERY slut-------*/
