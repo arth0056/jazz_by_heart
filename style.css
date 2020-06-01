@@ -953,6 +953,10 @@ header {
 
 }
 
+#projects .intro_img {
+    border-radius: 50%;
+}
+
 
 #projects .intro_txt {
 
