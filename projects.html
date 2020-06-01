@@ -54,51 +54,84 @@ maximum-scale=1.0, user-scalable=no" />
 
     </header>
 
+
+
+
+
+
+
+
+
+    <img src="" alt="" class="splash_img">
+
     <template id="template">
         <article class="song_container">
 
-            <h2 class="song_name"></h2>
 
-            <audio controls src="" class="song">
-
-            </audio>
-
-        </article>
-
-    </template>
-
-
-    <section id="music">
-
-        <img src="" alt="" class="splash_img">
-
-
-        <div class="red_container">
+            <div class="red_container">
 
 
 
-            <div class="album_preview">
+                <div class="album_preview">
 
 
 
 
-                <div class="album_preview_visual">
+                    <div class="album_preview_visual">
 
-                    <!--                    <button class="filter valgt" data-filter="alle">alle</button>-->
+                        <!--                    <button class="filter valgt" data-filter="alle">alle</button>-->
 
-                    <button class="filter" data-filter="jazz">Experimotion</button>
-                    <button class="filter" data-filter="blues">Gilllian Welsh Project</button>
-                    <button class="filter" data-filter="rock">Silence between strings</button>
+                        <button class="filter" data-filter="exp_motion">Experimotion</button>
+                        <button class="filter" data-filter="g_w_project">Gilllian Welsh Project</button>
+                        <button class="filter" data-filter="sb_strings">Silence between strings</button>
+
+                    </div>
+
+                    <div class="projects_intro">
+
+                        <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+
+                        <img src="" alt="" class="intro_img">
+
+
+                    </div>
+
+
+
+
 
                 </div>
 
-                <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+            </div>
 
+
+            <div class="projects_content">
+
+
+
+                <div class="video_wrap">
+
+                    <video controls class="project_video">
+                        <source src="https://www.youtube.com/watch?v=G4Fw9aVgD1c&t=964s"> </video>
+
+
+                </div>
+
+                <div class="txt_wrap">
+                    <h1 class="header_1">Music magic</h1>
+
+                </div>
 
 
                 <div class="song_wrap">
 
                     <div class="song_list">
+
+                        <audio controls src="" class="song1 song"></audio>
+                        <audio controls src="" class="song2 song"></audio>
+                        <audio controls src="" class="song3 song"></audio>
+                        <audio controls src="" class="song4 song"></audio>
+
 
 
 
@@ -106,20 +139,18 @@ maximum-scale=1.0, user-scalable=no" />
                 </div>
 
 
-
             </div>
 
-        </div>
-
-
-        <div class="music_magic_txt">
-            <h1>Music magic</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque.</p>
-        </div>
 
 
 
 
+
+        </article>
+
+    </template>
+
+    <section id="projects">
     </section>
 
     <footer>
@@ -153,8 +184,8 @@ maximum-scale=1.0, user-scalable=no" />
 
 
 
-        let filter = "alle";
-        const container = document.querySelector(".song_list");
+        let filter = "exp_motion";
+        const container = document.querySelector("#projects");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -214,13 +245,23 @@ maximum-scale=1.0, user-scalable=no" />
 
             side.forEach(ting => {
 
-                if (filter == "alle" || filter == ting.genre) {
+                if (filter == "alle" || filter == ting.project) {
 
 
                     const clon = template.cloneNode(true).content;
 
-                    clon.querySelector(".song_name").textContent = ting.song_name;
-                    clon.querySelector(".song").src = ting.song.guid;
+                    clon.querySelector(".intro_img").src = ting.projects_img_1.guid;
+                    clon.querySelector(".intro_txt").textContent = ting.projects_txt_1;
+
+                    clon.querySelector(".project_video").src = ting.video_1.guid;
+
+                    clon.querySelector(".header_1").textContent = ting.header_1;
+
+                    clon.querySelector(".song1").src = ting.song_1.guid;
+                    clon.querySelector(".song2").src = ting.song_2.guid;
+                    clon.querySelector(".song3").src = ting.song_3.guid;
+                    clon.querySelector(".song4").src = ting.song_4.guid;
+
 
 
                     container.appendChild(clon);
@@ -238,6 +279,15 @@ maximum-scale=1.0, user-scalable=no" />
             })
 
         }
+
+        //        function showElement() {
+        //            side.forEach(element => {
+        //                document.querySelector(".intro_img").src = element.project_img_1;
+        //
+        //
+        //            })
+        //
+        //        }
 
     </script>
 

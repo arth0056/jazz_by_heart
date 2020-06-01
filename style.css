@@ -919,6 +919,101 @@ header {
 
 
 
+/*-----------projects------*/
+
+
+
+
+#projects .red_container {
+
+
+
+    /*
+    display: flex;
+    justify-content: center;
+*/
+
+    transform: rotate(5deg) translate(-18vw) translateY(-10vh);
+    height: 100%;
+
+}
+
+
+
+#projects .album_preview {
+
+
+    transform: rotate(-5deg) translate(0vw);
+    margin: auto;
+    max-width: 90vw;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#projects .intro_txt {
+
+    line-height: 1.4rem;
+
+
+    text-align: center;
+    padding-bottom: 1vw;
+}
+
+
+#projects .album_preview_visual {
+
+    padding: 1rem;
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center
+}
+
+#projects .album_preview_visual button {
+
+    background-color: transparent;
+    border-color: transparent;
+
+    font-size: 1.4rem;
+    color: #ebebeb;
+    padding: 4vw;
+
+
+}
+
+#projects .album_preview_visual button:hover {
+    color: #D99236;
+    cursor: pointer;
+}
+
+#projects .album_preview_visual button:active {
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+#projects .project_video {
+    width: 90vw;
+
+
+}
+
+#projects .song {
+    margin: 4vw;
+}
+
+#projects .projects_content {
+    text-align: center;
+}
+
+
+/*-----------projects slut------*/
+
+
 /*----------about------------*/
 
 #about .img_1,
@@ -1136,7 +1231,7 @@ footer {
 
 
 
-    /*-----------projects------*/
+
 
 
 
@@ -1165,6 +1260,37 @@ footer {
     }
 
 
+    /*-----------projects------*/
+
+    #projects .project_video {
+        width: 50vw;
+    }
+
+    #projects .projects_intro {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        max-width: 90vw;
+
+    }
+
+
+    #projects .intro_img {
+        width: 20vw;
+    }
+
+
+    #projects .intro_txt {
+
+        line-height: 1.4rem;
+
+        max-width: 50vw;
+        text-align: left;
+        padding-bottom: 1vw;
+        padding-right: 4rem;
+    }
+
+
+    /*-----------projects slut------*/
 
 
     #music .red_container {
