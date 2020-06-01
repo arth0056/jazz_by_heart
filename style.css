@@ -429,7 +429,7 @@ header {
 
 .splash_img {
 
-    width: 100vw;
+    width: 147vw;
 
 
 
@@ -1133,6 +1133,10 @@ footer {
     }
 
 
+
+    .splash_img {
+        width: 100vw;
+    }
 
     /*-----------Home------*/
 
