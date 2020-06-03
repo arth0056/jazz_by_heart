@@ -431,6 +431,7 @@ header {
 .splash_img {
 
     width: 147vw;
+    filter: grayscale(100%);
 
 
 

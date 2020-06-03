@@ -207,7 +207,7 @@ maximum-scale=1.0, user-scalable=no" />
             const response = await fetch(endpoint);
             side = await response.json();
             console.log(side);
-            showSongs();
+            showProject();
             addEventToButtons();
         }
 
@@ -243,14 +243,14 @@ maximum-scale=1.0, user-scalable=no" />
                 elm.classList.remove("valgt");
             })
             this.classList.add("valgt");
-            showSongs();
+            showProject();
         }
 
 
         /************* script der kloner det content som hører til det valgte projekt og sætter dem ind i som content ********/
 
 
-        function showSongs() {
+        function showProject() {
 
             console.log(side);
             container.innerHTML = "";
