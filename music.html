@@ -80,7 +80,7 @@ maximum-scale=1.0, user-scalable=no" />
             <div class="album_preview">
 
 
-                <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+                <p class="intro_txt"> Jazz By Heart create a very intimate environment. It is a mix of musical styles but always played with a foundation based on jazz ideals. Music emanating from the close musical relationship between Karin and Daniel with focus on the audiences moods and requirements.</p>
 
 
                 <div class="album_preview_visual">
@@ -106,7 +106,7 @@ maximum-scale=1.0, user-scalable=no" />
                     </div>
                 </div>
 
-                <button class="more"> More songs > </button>
+                <!--                <button class="more"> More songs > </button>-->
 
             </div>
 
@@ -115,7 +115,7 @@ maximum-scale=1.0, user-scalable=no" />
 
         <div class="music_magic_txt">
             <h1>Music magic</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque.</p>
+            <p>Music & Magic is a creative and expressive combination of visuals and sound, that aims to bring a feeling of joy and infuse the listener with the magical powers of music. </p>
         </div>
 
 
@@ -176,7 +176,7 @@ maximum-scale=1.0, user-scalable=no" />
 
         }
 
-        /************* script til splash billede text_container y cta ********/
+        /************* script der henter wordpress som JSON data fra vores songs pod ********/
 
         async function hentData() {
             const response = await fetch(endpoint);
@@ -186,6 +186,8 @@ maximum-scale=1.0, user-scalable=no" />
             addEventToButtons();
         }
 
+        /************* to script der henter wordpress som JSON data fra vores music pod ********/
+
         async function hentData2() {
             const response2 = await fetch(endpoint2);
             side2 = await response2.json();
@@ -194,7 +196,7 @@ maximum-scale=1.0, user-scalable=no" />
         }
 
 
-
+        /************* script der sætter evntlistenere på vores filtreringsknapper ********/
 
         function addEventToButtons() {
             document.querySelectorAll(".filter").forEach(elm => {
@@ -203,6 +205,8 @@ maximum-scale=1.0, user-scalable=no" />
             })
         }
 
+
+        /************* script der sætter vores filter variable til at være lig den trykkede knap ********/
 
         function filtrering() {
 
@@ -215,6 +219,8 @@ maximum-scale=1.0, user-scalable=no" />
             showSongs();
         }
 
+
+        /************* script der kloner de sange som har den valgte genre og sætter dem ind i vores song list ********/
 
         function showSongs() {
 
@@ -238,7 +244,7 @@ maximum-scale=1.0, user-scalable=no" />
             });
 
         }
-
+        /************* script der indsætter splash billede fra music pod ********/
 
         function showElement() {
             side2.forEach(element => {

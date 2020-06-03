@@ -180,7 +180,7 @@ maximum-scale=1.0, user-scalable=no" />
 
         }
 
-        /************* script til splash billede text_container y cta ********/
+        /************* script der henter wordpress som JSON data ********/
 
         async function hentData() {
             const response = await fetch(endpoint);
@@ -189,7 +189,7 @@ maximum-scale=1.0, user-scalable=no" />
             showElement();
         }
 
-
+        /************* script der vælger hvilke dele af JSON som skal sættes ind i hvilke tags ********/
 
         function showElement() {
             side.forEach(element => {

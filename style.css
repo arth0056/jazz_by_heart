@@ -44,6 +44,7 @@ h1,
 h2 {
 
     font-family: 'Yeseva One', cursive;
+    font-weight: 100;
 
 }
 
@@ -52,8 +53,8 @@ h2 {
 p {
 
     font-family: 'Raleway', sans-serif;
-
     font-weight: 500;
+    line-height: 1.7rem;
 
 }
 
@@ -957,6 +958,11 @@ header {
     border-radius: 50%;
 }
 
+#projects_temp .project_video {
+    /*    height: 50vh;*/
+
+
+}
 
 #projects .intro_txt {
 
@@ -1000,11 +1006,7 @@ header {
     text-decoration-color: white;
 }
 
-#projects_temp .project_video {
-    width: 90vw;
 
-
-}
 
 #projects_temp .song {
     margin: 4vw;
@@ -1270,9 +1272,13 @@ footer {
 
     /*-----------projects------*/
 
+
     #projects_temp .project_video {
+
         width: 50vw;
+        height: 50vh;
     }
+
 
     #projects .projects_intro {
         display: flex;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
 
@@ -194,16 +194,17 @@ maximum-scale=1.0, user-scalable=no" />
 
         }
 
-        /************* script til splash billede text_container y cta ********/
+        /************* script der henter wordpress som JSON data fra vores concerts pod ********/
 
         async function hentData() {
             const response = await fetch(endpoint);
             side = await response.json();
             console.log(side);
-            showSongs();
+            showConcerts();
             showPreviousConcerts();
-            addEventToButtons();
         }
+
+        /************* script der henter wordpress som JSON data fra vores music pod (kun splash billede) ********/
 
         async function hentData2() {
             const response2 = await fetch(endpoint2);
@@ -213,31 +214,10 @@ maximum-scale=1.0, user-scalable=no" />
         }
 
 
+        /************* script der kloner koncerter med kategorien upcoming og sætter dem ind i en .upcoming_concerts ********/
 
 
-        function addEventToButtons() {
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-
-            })
-        }
-
-        function filtrering() {
-
-            console.log("filter", this.dataset.filter);
-            filter = this.dataset.filter;
-            filter = "Upcoming";
-
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            })
-            this.classList.add("valgt");
-            showSongs();
-            showPreviousConcerts();
-        }
-
-
-        function showSongs() {
+        function showConcerts() {
 
             console.log(side);
             container.innerHTML = "";
@@ -245,7 +225,7 @@ maximum-scale=1.0, user-scalable=no" />
 
             side.forEach(ting => {
 
-                if (filter == "alle" || filter == ting.upcoming_previous) {
+                if (filter == ting.upcoming_previous) {
 
 
                     const clon = template.cloneNode(true).content;
@@ -262,6 +242,8 @@ maximum-scale=1.0, user-scalable=no" />
         }
 
 
+        /************* script der kloner koncerter med kategorien upcoming og sætter dem ind i en .previous_concerts ********/
+
         function showPreviousConcerts() {
 
             console.log(side);
@@ -270,7 +252,7 @@ maximum-scale=1.0, user-scalable=no" />
 
             side.forEach(ting => {
 
-                if (filter2 == "alle" || filter2 == ting.upcoming_previous) {
+                if (filter2 == ting.upcoming_previous) {
 
 
                     const clon = template.cloneNode(true).content;
@@ -286,6 +268,8 @@ maximum-scale=1.0, user-scalable=no" />
 
         }
 
+
+        /************* script der indsætter splash billede fra music pod ********/
 
         function showElement() {
             side2.forEach(element => {

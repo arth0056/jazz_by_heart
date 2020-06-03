@@ -88,7 +88,7 @@ maximum-scale=1.0, user-scalable=no" />
 
                 <div class="projects_intro">
 
-                    <p class="intro_txt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere architecto, fugiat commodi aut illo debitis sit, dolorum aperiam doloremque, facilis tenetur perferendis saepe consequuntur recusandae illum itaque voluptates, mollitia expedita.</p>
+                    <p class="intro_txt">Here you can see three different projects, developed by the members of Jazz By Heart, in collaboration with other musicians and internally. All the projects have their own style while still keeping in touch with the core of what Jazz By Heart is.</p>
 
                     <img src="placeholder_img/birb.jpg" alt="" class="intro_img">
 
@@ -115,8 +115,8 @@ maximum-scale=1.0, user-scalable=no" />
 
                 <div class="video_wrap">
 
-                    <video controls class="project_video">
-                        <source src="https://www.youtube.com/watch?v=G4Fw9aVgD1c&t=964s"> </video>
+                    <embed src="https://www.youtube.com/watch?v=G4Fw9aVgD1c&t=964s" class="project_video">
+
 
 
                 </div>
@@ -201,7 +201,7 @@ maximum-scale=1.0, user-scalable=no" />
 
         }
 
-        /************* script til splash billede text_container y cta ********/
+        /************* script der henter wordpress som JSON data fra vores projects pod ********/
 
         async function hentData() {
             const response = await fetch(endpoint);
@@ -211,6 +211,9 @@ maximum-scale=1.0, user-scalable=no" />
             addEventToButtons();
         }
 
+        /************* script der henter wordpress som JSON data fra vores music pod (kun splash billede) ********/
+
+
         async function hentData2() {
             const response2 = await fetch(endpoint2);
             side2 = await response2.json();
@@ -218,7 +221,7 @@ maximum-scale=1.0, user-scalable=no" />
             showElement();
         }
 
-
+        /************* script der sætter eventlistenere på knapper ********/
 
 
         function addEventToButtons() {
@@ -230,6 +233,8 @@ maximum-scale=1.0, user-scalable=no" />
         }
 
 
+        /************* script der sætter vores filter variable til at være lig med den knap der bliver trykket ********/
+
         function filtrering() {
 
             console.log("filter", this.dataset.filter);
@@ -240,6 +245,9 @@ maximum-scale=1.0, user-scalable=no" />
             this.classList.add("valgt");
             showSongs();
         }
+
+
+        /************* script der kloner det content som hører til det valgte projekt og sætter dem ind i som content ********/
 
 
         function showSongs() {
@@ -259,7 +267,6 @@ maximum-scale=1.0, user-scalable=no" />
                     // clon.querySelector(".intro_txt").textContent = ting.projects_txt_1;
 
                     clon.querySelector(".project_video").src = ting.video_1.guid;
-
                     clon.querySelector(".header_1").textContent = ting.header_1;
 
                     clon.querySelector(".song1").src = ting.song_1.guid;
@@ -276,6 +283,8 @@ maximum-scale=1.0, user-scalable=no" />
         }
 
 
+        /************* script der indsætter splash billede fra music pod ********/
+
         function showElement() {
             side2.forEach(element => {
                 document.querySelector(".splash_img").src = element.splash_img.guid;
@@ -284,15 +293,6 @@ maximum-scale=1.0, user-scalable=no" />
             })
 
         }
-
-        //        function showElement() {
-        //            side.forEach(element => {
-        //                document.querySelector(".intro_img").src = element.project_img_1;
-        //
-        //
-        //            })
-        //
-        //        }
 
     </script>
 
