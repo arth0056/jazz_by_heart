@@ -1290,6 +1290,7 @@ footer {
         display: flex;
         flex-wrap: wrap-reverse;
         max-width: 90vw;
+        transform: translate(10vw);
 
     }
 
