@@ -465,12 +465,9 @@ header {
 
 #home .red_container {
 
-    position: relative;
+    transform: rotate(5deg) translate(-14vw) translateY(-10vh);
+    height: 100%;
 
-    left: -3rem;
-    top: -4rem;
-
-    height: 160vh;
 
 }
 
@@ -480,8 +477,7 @@ header {
 
 
 
-    position: absolute;
-    top: 40vh;
+    transform: rotate(-5deg) translate(0);
     margin: auto;
 
 
@@ -498,7 +494,10 @@ header {
 
 
 
-
+#home .album_preview {
+    width: 80vw;
+    padding: 4vw;
+}
 
 
 
@@ -509,6 +508,8 @@ header {
     display: flex;
 
     flex-direction: column-reverse;
+
+
 
 }
 
@@ -537,6 +538,9 @@ header {
     padding: 2rem;
 
     padding-top: 0;
+
+    max-width: 80%;
+    transform: translate(4vw);
 
 
 
@@ -1151,7 +1155,7 @@ footer {
 
     #home .red_container {
 
-        height: 120vh;
+        /*        height: 120vh;*/
 
     }
 
@@ -1173,6 +1177,7 @@ footer {
         display: flex;
 
         justify-content: center;
+        max-width: 90%;
 
 
 
