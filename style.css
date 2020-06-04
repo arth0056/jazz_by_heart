@@ -10,7 +10,7 @@ body {
 
 img {
     width: 100%;
-
+    overflow: hidden;
 }
 
 
@@ -659,13 +659,19 @@ header {
     padding-bottom: 6rem;
 
     width: 65%;
+
     justify-content: center;
 
 
 
 }
 
+#home .img_wrap {
 
+    overflow: hidden;
+    border-radius: 50%;
+
+}
 
 #home .projects img {
 
@@ -673,7 +679,7 @@ header {
 
     padding: 0rem 2rem 1rem 2rem;
 
-    width: 80%;
+
 
     border-radius: 50%;
 
@@ -1275,6 +1281,11 @@ footer {
 
     }
 
+    #home .projects img {
+        width: 26vw;
+        height: 22vw;
+    }
+
 
     /*-----------projects------*/
 
@@ -1351,7 +1362,8 @@ footer {
     #about .img_1,
     .img_2,
     .img_3 {
-        width: 25vw;
+        width: 22vw;
+        height: 22vw;
     }
 
     #about .paragraph_1,
